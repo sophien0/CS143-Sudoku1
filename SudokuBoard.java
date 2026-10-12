@@ -1,4 +1,9 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class SudokuBoard {
+
 //a single field
 char[][] board = new char[9][9];// I chose char because the Sudoku file contains numbers and "." .
 
@@ -23,9 +28,20 @@ public SudokuBoard(String data){ throws FileNotFoundException { //prevent unexpe
 
 //toStrong method
 public String toString(){
-   return "";
+   //create an empty string
+   String result = "";
+   
+   //go through every characters
+   for(int r = 0; r < 9; r++){
+      for(inr c = 0; c < 9; c++){
+         result += board[r][c] + " ";// add all the charcters together
+      }
+   }
+   
+   result += "\n";//start a new line after each row
 }
 
+return result;
 }
 
 
