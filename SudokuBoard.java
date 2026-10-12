@@ -8,11 +8,11 @@ public class SudokuBoard {
 char[][] board = new char[9][9];// I chose char because the Sudoku file contains numbers and "." .
 
 //a constructor with a String parameter
-public SudokuBoard(String data){ throws FileNotFoundException { //prevent unexpected data
+public SudokuBoard(String data)throws FileNotFoundException { //prevent unexpected data
    board = new char[9][9];
    
    //open the file
-   Scanner input = new Scanner(file(data));
+   Scanner input = new Scanner(new File(data));
    
    //read the file (each raw)
    for(int r = 0; r < 9; r++){
@@ -33,17 +33,13 @@ public String toString(){
    
    //go through every characters
    for(int r = 0; r < 9; r++){
-      for(inr c = 0; c < 9; c++){
+      for(int c = 0; c < 9; c++){
          result += board[r][c] + " ";// add all the charcters together
       }
+      result += "\n";//start a new line after each row
    }
-   
-   result += "\n";//start a new line after each row
+   return result;
 }
-
-return result;
-}
-
 
 
 }
