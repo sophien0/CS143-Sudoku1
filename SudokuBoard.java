@@ -3,11 +3,29 @@ public class SudokuBoard {
 char[][] board = new char[9][9];// I chose char because the Sudoku file contains numbers and "." .
 
 //a constructor with a String parameter
-public SudokuBoard(String data){
+public SudokuBoard(String data){ throws FileNotFoundException { //prevent unexpected data
+   board = new char[9][9];
+   
+   //open the file
+   Scanner input = new Scanner(file(data));
+   
+   //read the file (each raw)
+   for(int r = 0; r < 9; r++){
+   String line= input.next();
+      //each column
+      for(int c = 0; c < 9; c++){
+      board[r][c] = line.charAt(c);
+      }
+   }
+   //close the file
+   input.close();
 }
 
 //toStrong method
 public String toString(){
+   return "";
+}
+
 }
 
 
