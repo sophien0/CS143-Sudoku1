@@ -1,6 +1,6 @@
 public class SudokuBoard {
 //a single field
-char[][] board = new char[9][9];// I chose char because the Sudoku file contains numbers and "." .
+private char[][] board = new char[9][9];// I chose char because the Sudoku file contains numbers and "." .
 
 
 
