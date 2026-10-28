@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SudokuBoard {
 
 //a single field
-private char[][];// I chose char because the Sudoku file contains numbers and "." .
+private char[][] board;// I chose char because the Sudoku file contains numbers and "." .
 
 //a constructor with a String parameter
 public SudokuBoard(String data)throws FileNotFoundException { //prevent unexpected data
