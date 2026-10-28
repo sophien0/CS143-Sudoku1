@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class SudokuBoard {
 
 //a single field
-char[][] board = new char[9][9];// I chose char because the Sudoku file contains numbers and "." .
+private char[][];// I chose char because the Sudoku file contains numbers and "." .
 
 //a constructor with a String parameter
 public SudokuBoard(String data)throws FileNotFoundException { //prevent unexpected data
-   board = new char[9][9];
+board = new char[9][9];
    
    //open the file
    Scanner input = new Scanner(new File(data));
